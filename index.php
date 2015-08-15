@@ -86,7 +86,7 @@
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p>We provide technical and realistic service in terms of ISMS authorization era, by giving out <br/>check-lists for risk factors based on ISMS.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">SIGN UP</a></p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
             </div>
           </div>
         </div>

@@ -48,14 +48,27 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#MoreInfo">More info</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="./index.php">Home</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
+              <div class="modal fade" id="MoreInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Management Security</h4>
+                    </div>
+                    <div class="modal-body">
+                      아아 마이크 테스트 
+                    </div>
+                  </div>
+                </div>
+              </div>
 
           <h2 class="sub-header">Section title</h2>
           <div class="table-responsive">
