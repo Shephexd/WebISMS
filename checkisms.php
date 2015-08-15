@@ -61,10 +61,11 @@
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Management Security</h4>
+                      <h4 class="modal-title" id="myModalLabel">Security Evaluation</h4>
                     </div>
                     <div class="modal-body">
-                      아아 마이크 테스트 
+                      It is result about the bob's security level</br>
+                      
                     </div>
                   </div>
                 </div>
@@ -100,7 +101,8 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div>It is result about the bob's security level</br>
+                      
       </div>
     </div>
 
