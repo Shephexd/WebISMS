@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<?php
+  include "db_connect.php";
+  
+
+    mysql_query("set session character_set_connection=euckr;");
+    mysql_query("set session character_set_results=utf8;");
+    mysql_query("set session character_set_client=euckr;");
+
+?>
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -26,13 +38,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-
-<? php 
-  $manageSum=0;
-  $techSum=0;
-  $physicalSum=0;
-?>
+  </head> 
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -44,11 +50,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bus Of the Bus<span class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
+          <a class="navbar-brand" href="./index.php">Bus Of the Bus<span class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-toggle="modal" data-target="#MoreInfo">More info</a></li>
             <li><a href="#">link</a></li>
             <li><a href="./index.php">Home</a></li>
           </ul>
@@ -56,52 +61,48 @@
       </div>
     </nav>
 
-              <div class="modal fade" id="MoreInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Security Evaluation</h4>
-                    </div>
-                    <div class="modal-body">
-                      It is result about the bob's security level</br>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
 
           <h2 class="sub-header">Section title</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th  width='10%'>분류</th>
-                  <th>점검 내용</th>
-                  <th width='10%'>항목 중요도</th>
-                  <th width='7%'>항목 코드</th>
-                  <th width='7%'>진단 결과</th>
+                  <th  width='6%'>분류</th>
+                  <th>대주제</th>
+                  <th width='8%'>소주제</th>
+                  <th width=''>점검항목</th>
+                  <th width='24%'>결과</th>
+                  <th width='4%'>평가</th>
+                  <th width="6%">변경</th>
                 </tr>
               </thead>
               <tbody>
 <?php
+  $page=$_GET['page'];
+  echo $page;
 
-  for($i=1;$i<=10;$i++){
+  $result=mysql_query("select * from list") or die(mysql_error());  
+  $info = mysql_fetch_array($result);
+
+  for($i=1;$i<=12;$i++){
     echo "<tr>";
-    for($j=1;$j<=5;$j++){
-      echo "<td>".$i."</td>";
+    for($j=1;$j<=6;$j++){
+      echo "<td>".$info[$j]."</td>";
+      if($j==6)
+        if($info[6]==='취약')
+        echo "<td><button>양호</button></td>";
+        else if($info[6]==='양호')
+        echo "<td><button>취약</button></td>";
       $manageSum+=$i;
     }
     echo "</tr>";
   }
+
 ?>
-
-            <?php echo "test result = ".$manageSum ;?>
-
               </tbody>
             </table>
           </div>
-        </div>It is result about the bob's security level</br>
+        </div>
                       
       </div>
     </div>

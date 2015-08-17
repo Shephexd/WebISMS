@@ -42,13 +42,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">ISMS Virutal Auth System</a>
+              <a class="navbar-brand" href="http://54.65.37.68/">ISMS Virutal Auth System</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="./index.php">Home</a></li>
+                <li><a data-toggle="modal" data-target="#AboutModal">About</a></li>
+                <li><a data-toggle="modal" data-target="#ContactModal">Contact</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Link <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -85,28 +85,28 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
-              <p>We provide technical and realistic service in terms of ISMS authorization era, by giving out <br/>check-lists for risk factors based on ISMS.</p>
+              <p>We provide technical and realistic service in terms of ISMS authorization era, by giving out </br>check-lists for risk factors based on ISMS.</p>
               <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="http://cdn.playbuzz.com/cdn/8dbfb0e9-d8a6-4581-8556-b9bbed99baf3/f954b478-0698-4122-b7fd-d38a90845004.JPG" alt="Second slide">
+          <img class="second-slide" src="http://i1-win.softpedia-static.com/screenshots/Abstract-Heaven-Screensaver_1.png" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1>BUS OF THE BUS</h1>
+              <p> You can now analyze what threats you contain in your own business by means of security, </br> and find out your own solutions according to checklists. </p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTB4vIKn_C4cCqXKGnCT7FW6EgQcmJvj-MYZ2Lo-Rjn5i3S62Ev" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <h1>BUS OF THE BUS</h1>
+              <p> We provide you permanent Consulting Service, </br> with periodical updates followed by ISMS standards. </p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
@@ -136,26 +136,8 @@
           <p>인적보안, 운영보안 등의 인증 항목을 기반으로 관리과정 통제에 대한 자가진단 항목 제공</p>
 
             <!-- Management Detail Text -->
-            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#ManageModal">View details &raquo;</button></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=관리" role="button">View Details &raquo;</a></p>
 
-                <!-- Modal -->
-              <div class="modal fade" id="ManageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Management Security</h4>
-                    </div>
-                    <div class="modal-body">
-                      아아 마이크 테스트 
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <!--/END Modal -->
             <!-- /END Management Detail Text -->
 
         </div><!-- /.col-lg-4 -->
@@ -163,28 +145,8 @@
           <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/18101-200.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Physical Security</h2>
           <p>물리적보안, IT재해복구 등 물리적 시스템 및 자산 관리에 대한 통제사항에 대해 자가진단 항목 제공</p>
-            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#PhysicalModal">View details &raquo;</button></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=물리" role="button">View Details &raquo;</a></p>
 
-
-
-
-              <!-- Modal -->
-              <div class="modal fade" id="PhysicalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Physical Security</h4>
-                    </div>
-                    <div class="modal-body">
-                      이런거 시키지 말아요
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             <!-- /END Management Detail Text -->
             
         </div><!-- /.col-lg-4 -->
@@ -194,28 +156,44 @@
           <p>시스템개발보안, 접근통제 등의 인증항목을 기반으로 총체적 정보보호대책에 대한 자가진단 항목을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#TechModal">View details &raquo;</button></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=기술" role="button">View Details &raquo;</a></p>
 
-                <!-- Modal -->
-              <div class="modal fade" id="TechModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Technical Security</h4>
-                    </div>
-                    <div class="modal-body">
-                      제발 
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <!--/END Modal -->
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/17655-200.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Computer Security</h2>
+          <p>주요 정보통신 기반시설 가이드라인을 바탕으로 PC 취약점과 그에 대한 자가진단 및 대응 항목을 제공</p>
+
+                     <!-- Management Detail Text -->
+            <p><a class="btn btn-default" href="./checkisms.php?&page=PC" role="button">View Details &raquo;</a></p>
+
+            <!-- /END Management Detail Text -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/87003-200.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Web Security</h2>
+          <p>주요 정보통신 기반시설 가이드라인을 바탕으로 웹 페이지의 취약점가 그에 대한 자가진단 및 대응 항목을 제공</p>
+
+                     <!-- Management Detail Text -->
+            <p><a class="btn btn-default" href="./checkisms.php?&page=웹" role="button">View Details &raquo;</a></p>
+
+            <!-- /END Management Detail Text -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/66245-200.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Network Security</h2>
+          <p>ISMS 가이드라인과 네트워크 구성을 바탕으로 취약점 자가진단과 대응방안을 제공</p>
+
+                     <!-- Management Detail Text -->
+            <p><a class="btn btn-default" href="./checkisms.php?&page=네트워크" role="button">View Details &raquo;</a></p>
+
+            <!-- /END Management Detail Text -->
+        </div><!-- /.col-lg-4 -->
+
       </div><!-- /.row -->
 
 <!--Group Item -->
@@ -325,56 +303,101 @@
 
 	<!-- /END GROUP ITEM -->
 
-      <!-- START THE FEATURETTES -->
-
-
-      
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="pull-right"><a href="./index.php">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a data-toggle="modal" data-target="#PrivacyModal">Privacy</a> &middot; 
+        <a data-toggle="modal" data-target="#TermsModal">Terms</a></p>
       </footer>
+
+      <!-- Modal -->
+              <div class="modal fade" id="PrivacyModal" tabindex="-1" role="dialog" aria-labelledby="Privacy">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Privacy</h4>
+                    </div>
+                    <div class="modal-body">
+                      Copyright@Bus of the Bus in BoB Consulting Team</br></br>
+                      Developer - Taekyung Han </br>
+                      Sub Developer - Jiwon Lee </br>
+                      Project Manager - Junghwan Choi </br>
+                      Management Analyst - Seoyun Choi </br>
+                      Technology Analyst - Jungrae Kim </br>
+                      Physical Analyst - Bosun Kang </br>
+                      Document Manager - Eunhee Ahn </br></br>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="close" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="TermsModal" tabindex="-1" role="dialog" aria-labelledby="Terms">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Terms</h4>
+                    </div>
+                    <div class="modal-body">
+                      <font color = "skyblue">Based on ISMS Authorization Standards for Business </font></br></br>
+                      Five Management Process </br>
+                      Thirteen Information Security Solution </br></br>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="close" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="About">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">About</h4>
+                    </div>
+                    <div class="modal-body">
+                      <font color = "red">BUS of the BUS </font></br></br>
+                      We provide technical and realistic service in terms of ISMS authorization era, by giving out </br>check-lists for risk factors based on ISMS. </br>
+                      You can now analyze what threats you contain in your own business by means of security, </br> and find out your own solutions according to checklists. </br>
+                      We provide you permanent Consulting Service, </br> with periodical updates followed by ISMS standards. </br></br>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="close" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="ContactModal" tabindex="-1" role="dialog" aria-labelledby="Contact">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Contact</h4>
+                    </div>
+                    <div class="modal-body">
+                      <font color = "red">Contact US </font></br></br>
+                        Addr: 서울특별시 강남구 역삼동 미림타워 3층 BoB센터 </br>
+                        Tel: 010-2573-4949 </br>
+                        E-mail: busofthebus@kitribob.kr </br></br>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="close" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!--/END Modal -->  
 
     </div><!-- /.container -->
 
