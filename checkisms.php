@@ -3,7 +3,6 @@
 <?php
   include "db_connect.php";
   
-
     mysql_query("set session character_set_connection=euckr;");
     mysql_query("set session character_set_results=utf8;");
     mysql_query("set session character_set_client=euckr;");
@@ -67,49 +66,76 @@
             <table class="table table-striped">
               <thead>
                 <tr>
+                  <th width='5%'>목차</th>
                   <th  width='6%'>분류</th>
                   <th width='6%'>대주제</th>
                   <th width='8%'>소주제</th>
                   <th width=''>점검항목</th>
                   <th width='28%'>결과</th>
-                  <th width='4%'>평가</th>
-                  <th width="6%">변경</th>
+                  <th width='8%'>평가</th>
                 </tr>
               </thead>
               <tbody>
 <?php
   $page=$_GET['page'];
 
-  $theme_list = array("tech", "Manage", "pc", "web"); //check if page is in theme_list
+  $theme_list = array("tech","phy" ,"manage", "pc", "web","network"); //check if page is in theme_list
+  $state_list = array("취약","양호");
 
-    if (in_array($page, $theme_list)) { // if Not in page don't appear the site any information
+
+    if (in_array($page, $theme_list)) 
+    { // if Not in page don't appear the site any information
 
     $result=mysql_query("select * from list where theme='".$page."'") or die(mysql_error());
     $result2=mysql_query("select count(*) from list where theme='".$page."'") or die(mysql_error());
-    
-    $info = mysql_fetch_array($result);
     $count = mysql_fetch_array($result2);
 
     echo "전체 ".$page." 분류는 ".$count[0]."개 입니다";
 
-    for($i=1;$i<=$count[0];$i++){
-      echo "<tr>";
-      for($j=1;$j<=6;$j++){
+    for($i=1;$i<=$count[0];$i++)
+    {
+          $info = mysql_fetch_array($result);
+      echo "<tr data-toggle='modal' data-target='#myModal".$info[0]."'>";
+      echo "<td>".$i."</td>";
+      for($j=1;$j<=6;$j++)
+      {
         echo "<td>".$info[$j]."</td>";
-        if($j==6)
+        if($j==6){
           if($info[6]==='취약')
-          echo "<td><button>양호</button></td>";
+            $state="양호"; 
           else if($info[6]==='양호')
-          echo "<td><button>취약</button></td>";
-        $manageSum+=$i;
+            $state="취약";  
+        }
+        
       }
       echo "</tr>";
+
+      echo '
+        <div class="modal fade" id="myModal'.$info[0].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                '.$i.'번 값을 변경하시겠습니까?
+              </div>
+              <div class="modal-footer">
+                  <p><a class="btn btn-lg btn-primary" href="/update_eval.php?state='.$state.'&target='.$info[0].'&page='.$page.'" role="button">'.$state.'(으)로 변경</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        ';
+        $state="";
     }
   }
 
   else{
     echo "잘못된 page값입니다.";
   }
+
 ?>
               </tbody>
             </table>

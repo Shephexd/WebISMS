@@ -52,23 +52,40 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Link <span class="caret"></span></a>
                   <ul class="dropdown-menu">
+                    <li class="dropdown-header">Related Sites</li>
                     <li><a href="http://www.kitribob.kr/bob/">BoB</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="http://isms.kisa.or.kr/kor/main.jsp">ISMS Official</a></li>
                     <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li class="dropdown-header">Checklists</li>
+                    <li><a href="http://isms.kisa.or.kr/kor/intro/intro02.jsp">Standards</a></li>
+                    <li><a href="http://isms.kisa.or.kr/kor/notice/dataList.jsp?p_No=48&b_No=48">Guidelines</a></li>
                   </ul>
                 </li>
               </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+              
+                <?php
+                if($_SESSION['login'] === 'ok'){
+                ?>
+                  <li><a href="./logincheck.php?&temp=logout">LogOut</a></li>
+                <?php
+                }
+                else{
+                ?>
+                  <li><a href="./login.php">Login</a></li>
+                <?php
+                }
+                ?>
+
+              </ul>
+
             </div>
           </div>
         </nav>
 
       </div>
     </div>
-
 
     <!-- Carousel
     ================================================== -->
@@ -136,7 +153,7 @@
           <p>인적보안, 운영보안 등의 인증 항목을 기반으로 관리과정 통제에 대한 자가진단 항목 제공</p>
 
             <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=관리" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=manage" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
 
@@ -145,7 +162,7 @@
           <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/18101-200.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Physical Security</h2>
           <p>물리적보안, IT재해복구 등 물리적 시스템 및 자산 관리에 대한 통제사항에 대해 자가진단 항목 제공</p>
-            <p><a class="btn btn-default" href="./checkisms.php?&page=물리" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=phy" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
             
@@ -156,7 +173,7 @@
           <p>시스템개발보안, 접근통제 등의 인증항목을 기반으로 총체적 정보보호대책에 대한 자가진단 항목을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=기술" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=tech" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->
@@ -167,7 +184,7 @@
           <p>주요 정보통신 기반시설 가이드라인을 바탕으로 PC 취약점과 그에 대한 자가진단 및 대응 항목을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=PC" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=pc" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->
@@ -175,10 +192,10 @@
         <div class="col-lg-4">
           <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/87003-200.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Web Security</h2>
-          <p>주요 정보통신 기반시설 가이드라인을 바탕으로 웹 페이지의 취약점가 그에 대한 자가진단 및 대응 항목을 제공</p>
+          <p>주요 정보통신 기반시설 가이드라인을 바탕으로 웹 페이지의 취약점과 그에 대한 자가진단 및 대응 항목을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=웹" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=web" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->
@@ -189,7 +206,7 @@
           <p>ISMS 가이드라인과 네트워크 구성을 바탕으로 취약점 자가진단과 대응방안을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=네트워크" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?&page=network" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->
@@ -306,7 +323,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="./index.php">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a data-toggle="modal" data-target="#PrivacyModal">Privacy</a> &middot; 
+        <p>&copy; 2015 Bus of the Bus Team &middot; <a data-toggle="modal" data-target="#PrivacyModal">Privacy</a> &middot; 
         <a data-toggle="modal" data-target="#TermsModal">Terms</a></p>
       </footer>
 
