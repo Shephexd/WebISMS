@@ -29,7 +29,20 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
+
   <body>
+    <!DOCTYPE html>
+<meta charset="utf-8" />
+<?php
+session_start();
+if(!isset($_SESSION['id'])) {
+  echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+  echo $_SESSION['id'];
+  exit;
+}
+$user_id = $_SESSION['id'];
+
+?>
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -73,7 +86,7 @@
                 }
                 else{
                 ?>
-                  <li><a href="./login.php">Login</a></li>
+                  <li><a href="./logout.php">Log Out</a></li>
                 <?php
                 }
                 ?>
@@ -394,7 +407,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

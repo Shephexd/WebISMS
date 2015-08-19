@@ -1,32 +1,14 @@
-<?php
-	include "db_conn.php";
+<meta charset="utf-8" />
 
+<?php
+	session_start();
 	$id=$_POST['id'];
 	$pw=$_POST['pw'];
 	
-//	$result=mysql_query("select * from member where id = '".$id."'") or die(mysql_error());
-//	$info = mysql_fetch_array($result);
-
 	if($id==='admin' && $pw==='admin1234'){
-
-		header("location: ./index.php");
-		echo 'Login OK';
+		echo "Ok";
 		$_SESSION['id'] = $id;
 	}
-	else{
-		header("location: ./login.php");
-		
-	}
+	echo "<script>window.location='./index.php';</script>";
 
 ?>
-
-<html>
-<body>
-	<?php 
-	echo "hh";
-	echo $id;
-	echo $pw;
-
-	?>
-	</body>
-</html>
