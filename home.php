@@ -81,7 +81,7 @@ $user_id = $_SESSION['id'];
                 <?php
                 if($_SESSION['login'] === 'ok'){
                 ?>
-                  <li><a href="./logincheck.php?&temp=logout">LogOut</a></li>
+                  <li><a href="./logincheck.php?temp=logout">LogOut</a></li>
                 <?php
                 }
                 else{
@@ -116,7 +116,7 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p>We provide technical and realistic service in terms of ISMS authorization era, by giving out </br>check-lists for risk factors based on ISMS.</p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p> You can now analyze what threats you contain in your own business by means of security, </br> and find out your own solutions according to checklists. </p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p> We provide you permanent Consulting Service, </br> with periodical updates followed by ISMS standards. </p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php" role="button">Show Result</a></p>
+              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
             </div>
           </div>
         </div>
@@ -166,7 +166,7 @@ $user_id = $_SESSION['id'];
           <p>인적보안, 운영보안 등의 인증 항목을 기반으로 관리과정 통제에 대한 자가진단 항목 제공</p>
 
             <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=manage" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?page=manage" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
 
@@ -175,7 +175,7 @@ $user_id = $_SESSION['id'];
           <img class="img-circle" src="https://d30y9cdsu7xlg0.cloudfront.net/png/18101-200.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Physical Security</h2>
           <p>물리적보안, IT재해복구 등 물리적 시스템 및 자산 관리에 대한 통제사항에 대해 자가진단 항목 제공</p>
-            <p><a class="btn btn-default" href="./checkisms.php?&page=physical" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?page=physical" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
             
@@ -186,7 +186,7 @@ $user_id = $_SESSION['id'];
           <p>시스템개발보안, 접근통제 등의 인증항목을 기반으로 총체적 정보보호대책에 대한 자가진단 항목을 제공</p>
 
                      <!-- Management Detail Text -->
-            <p><a class="btn btn-default" href="./checkisms.php?&page=tech" role="button">View Details &raquo;</a></p>
+            <p><a class="btn btn-default" href="./checkisms.php?page=tech" role="button">View Details &raquo;</a></p>
 
             <!-- /END Management Detail Text -->
         </div><!-- /.col-lg-4 -->

@@ -42,7 +42,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
+                  <li><a href="http://isms.kisa.or.kr/kor/main.jsp">Features</a></li>
                   <li><a href="http://kitribob.kr">BoB</a></li>
                 </ul>
               </nav>
@@ -50,23 +50,26 @@
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Auth your identification.</h1>
-            <p class="lead">Login your ID to access ISMS result</p>
+            <h1 class="cover-heading">Login Authorization Page</h1>
+            <p class="lead">We provide you different checklists based on identified evaluation </p>
             <p class="lead">
-              
-          <form method="post" class="navbar-form navbar-left" role="login" action="./logincheck.php">
+          
+             
+          <form method="post" class="navbar-form navbar-center" role="login" action="./logincheck.php"> 
             <div class=".col-md-4">
               <div class="form-group">
                 <input type="text" name="id" class="form-control" placeholder="ID">
               </div>
               <input type="password" name="pw" class="form-control" placeholder="PW">
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default">Log-in</button>
             </div>
-          </form>
+
+          
+        </p>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>Covered by <a href="https://www.facebook.com/photo.php?fbid=116521215106489&set=a.116521211773156.25101.100002458326713&type=3&theater">Takyung Han</a>, by <a href="https://www.facebook.com/taekyoung.han.5?fref=ts">@BoB Developer</a>.</p>
             </div>
           </div>
 

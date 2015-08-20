@@ -73,7 +73,7 @@
                   <th width=''>점검항목</th>
                   <th width='6%'>결과</th>
                   <th width='6%'>평가</th>
-                  <th width='6%'>평가</th>
+                  <th width='6%'>조치여부</th>
                 </tr>
               </thead>
               <tbody>
@@ -105,7 +105,9 @@
       echo "<td>".$i."</td>";
       for($j=1;$j<=7;$j++)
       {
+
         echo "<td>".$info[$j]."</td>";
+
         if($j==7){
           if($info[7]==='no')
             $state="yes"; 
@@ -115,7 +117,7 @@
         
       }
       echo "</tr>";
-
+      if($info[6]==='weak'){
       echo '
         <div class="modal fade" id="myModal'.$info[0].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
@@ -134,7 +136,9 @@
           </div>
         </div>
         ';
+        }//end of if
         $state="";
+
     }
   }
 

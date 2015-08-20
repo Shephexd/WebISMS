@@ -5,7 +5,7 @@
 	$id=$_POST['id'];
 	$pw=$_POST['pw'];
 	
-	if($id==='admin' && $pw==='admin1234'){
+	if($id==='bob' && $pw==='kitri!@#'){
 		echo "Ok";
 		$_SESSION['id'] = $id;
 	}
