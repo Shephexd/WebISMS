@@ -67,11 +67,11 @@
               <thead>
                 <tr>
                   <th width='5%'>목차</th>
-                  <th  width='6%'>분류</th>
+                  <th width='6%'>분류</th>
                   <th width='6%'>대주제</th>
-                  <th width='12%'>소주제</th>
-                  <th width=''>점검항목</th>
-                  <th width='6%'>결과</th>
+                  <th width='10%'>소주제</th>
+                  <th width="">점검항목</th>
+                  <th width="5%">결과</th>
                   <th width='6%'>평가</th>
                   <th width='6%'>조치여부</th>
                 </tr>
@@ -80,18 +80,28 @@
 <?php
   $page=$_GET['page'];
 
-  $theme_list = array("tech","physical" ,"manage","pc", "web","network"); //check if page is in theme_list
+  $theme_list = array("tech","physical" ,"manage", "all", "weak"); //check if page is in theme_list
   $state_list = array("yes","no");
 
 
-    if (in_array($page, $theme_list)) 
+    if (in_array($page, $theme_list))
     { // if Not in page don't appear the site any information
 
-    $result=mysql_query("select * from list where theme='".$page."'") or die(mysql_error());
-    $result2=mysql_query("select count(*) from list where theme='".$page."'") or die(mysql_error());
-    $result3=mysql_query("select count(*) from list where theme='".$page."'and treat='no'") or die(mysql_error());
-        
-
+    if($page==='all'){
+      $result = mysql_query("select * from list") or die(mysql_error());
+      $result2 = mysql_query("select count(*) from list") or die(mysql_error());
+      $result3 = mysql_query("select count(*) from list where treat='no'") or die(mysql_error());
+    }
+    else if($page==='weak'){
+      $result = mysql_query("select * from list where evaluate='weak'") or die(mysql_error());
+      $result2 = mysql_query("select count(*) from list where evaluate='weak'") or die(mysql_error());
+      $result3 = mysql_query("select count(*) from list where evaluate='weak' and treat='no'") or die(mysql_error());  
+    }
+    else{
+      $result=mysql_query("select * from list where theme='".$page."'") or die(mysql_error());
+      $result2=mysql_query("select count(*) from list where theme='".$page."'") or die(mysql_error());
+      $result3=mysql_query("select count(*) from list where theme='".$page."'and treat='no'") or die(mysql_error());
+    }
     $count = mysql_fetch_array($result2);
     $count_fine = mysql_fetch_array($result3);
 
@@ -100,21 +110,43 @@
 
     for($i=1;$i<=$count[0];$i++)
     {
+
           $info = mysql_fetch_array($result);
-      echo "<tr data-toggle='modal' data-target='#myModal".$info[0]."'>";
+          $treat = '';
+          if($info[6]==='weak'){
+            if($info[7]==='yes')
+              $treat = 'success';
+            else if($info[7]==='no')
+              $treat = 'danger';
+          }
+      echo "<tr data-toggle='modal' class='".$treat."' data-target='#myModal".$info[0]."'>";
       echo "<td>".$i."</td>";
       for($j=1;$j<=7;$j++)
       {
-
-        echo "<td>".$info[$j]."</td>";
-
-        if($j==7){
-          if($info[7]==='no')
-            $state="yes"; 
-          else if($info[7]==='yes')
-            $state="no";  
+        if($j==6){
+          if($info[6]=='weak'){
+            echo "<td><font color='red'>".$info[$j]."</font></td>";
+          }
+          else{
+            echo "<td>".$info[$j]."</td>";  
+          }
         }
-        
+        else if($j==7){
+          if($info[7]==='no'){
+            $state="yes";
+            echo "<td><font color='red'>".$info[$j]."</font></td>";
+          }
+          else if($info[7]==='yes'){
+            $state="no";
+            echo "<td><font color='blue'>".$info[$j]."</font></td>";
+          }
+          else{
+            echo "<td>".$info[$j]."</td>";
+          }
+        }
+        else{
+          echo "<td>".$info[$j]."</td>";
+        }
       }
       echo "</tr>";
       if($info[6]==='weak'){

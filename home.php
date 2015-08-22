@@ -116,7 +116,10 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p>We provide technical and realistic service in terms of ISMS authorization era, by giving out </br>check-lists for risk factors based on ISMS.</p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=all" role="button">Show All</a>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=weak" role="button">Weakness</a>
+              </p>
             </div>
           </div>
         </div>
@@ -126,7 +129,10 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p> You can now analyze what threats you contain in your own business by means of security, </br> and find out your own solutions according to checklists. </p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=all" role="button">Show All</a>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=weak" role="button">Weakness</a>
+              </p>
             </div>
           </div>
         </div>
@@ -136,7 +142,10 @@ $user_id = $_SESSION['id'];
             <div class="carousel-caption">
               <h1>BUS OF THE BUS</h1>
               <p> We provide you permanent Consulting Service, </br> with periodical updates followed by ISMS standards. </p>
-              <p><a class="btn btn-lg btn-primary" href="./checkisms.php?page=*" role="button">Show Result</a></p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=all" role="button">Show All</a>
+                <a class="btn btn-lg btn-primary" href="./checkisms.php?page=weak" role="button">Weakness</a>
+              </p>
             </div>
           </div>
         </div>

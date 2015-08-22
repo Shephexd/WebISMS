@@ -38,7 +38,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">BUS OF THE BUS</h3>
+              <h3 class="masthead-brand"><a href="./login.php">BUS OF THE BUS</a></h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
@@ -69,7 +69,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Covered by <a href="https://www.facebook.com/photo.php?fbid=116521215106489&set=a.116521211773156.25101.100002458326713&type=3&theater">Takyung Han</a>, by <a href="https://www.facebook.com/taekyoung.han.5?fref=ts">@BoB Developer</a>.</p>
+              <p>Covered by <a href="https://www.facebook.com/photo.php?fbid=216009571798467&set=t.100002458326713&type=3&theater">Takyung Han</a>, by <a href="https://www.facebook.com/taekyoung.han.5?fref=ts">@BoB Developer</a>.</p>
             </div>
           </div>
 

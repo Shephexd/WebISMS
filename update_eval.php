@@ -7,7 +7,7 @@
  
 
 
-  $page_list = array("tech","physical" ,"manage"); //check if page is in page_list
+  $page_list = array("tech","physical" ,"manage", "all", "weak"); //check if page is in page_list
   $state_list = array("yes","no");
 
 
